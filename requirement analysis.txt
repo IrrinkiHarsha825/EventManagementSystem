@@ -1,0 +1,43 @@
+Organizer Management:
+
+The system should be able to manage information about event organizers, including their names and contact details.
+It should allow adding, updating, and deleting organizer records.
+Event Management:
+
+The system should support managing events, including their names, descriptions, dates, locations, and the organizers hosting them.
+It should enable adding, updating, and deleting event records.
+Events should be associated with specific organizers.
+Participant Management:
+
+The system should handle information about participants interested in events, including their names and contact details.
+It should allow adding, updating, and deleting participant records.
+Registration Management:
+
+The system should facilitate registering participants for events.
+It should store information about when participants registered for specific events.
+Registration records should link events with participants.
+Venue Management:
+
+The system should manage venues where events take place, including venue names, locations, and capacities.
+It should support adding, updating, and deleting venue records.
+Venues should be associated with events.
+Speaker Management:
+
+The system should handle information about speakers participating in events, including their names and contact details.
+It should allow adding, updating, and deleting speaker records.
+Event-Speaker Association:
+
+The system should associate speakers with events they are scheduled to speak at.
+It should allow adding and removing such associations.
+Queries and Reports:
+
+The system should support querying for various information, such as:
+Details of upcoming events.
+Participants registered for specific events.
+Speakers scheduled for upcoming events.
+Available venues for scheduling new events.
+It should generate reports based on user queries or predefined criteria.
+Data Integrity:
+
+The system should enforce referential integrity constraints to ensure that events, organizers, participants, speakers, and venues remain consistent.
+It should prevent actions that would result in orphaned records or invalid associations.

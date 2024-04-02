@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Information</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Payment Information</h1>
+    <% if(k && k.length > 0) { %>
+        <table>
+            <tr>
+                <th>Payment ID</th>
+                <th>Booking ID</th>
+                <th>Payment Method</th>
+                <th>Amount</th>
+                <th>Payment Date</th>
+                <th>Status</th>
+            </tr>
+            <% k.forEach(function(payment) { %>
+                <tr>
+                    <td><%= payment.Payment_ID %></td>
+                    <td><%= payment.Booking_ID %></td>
+                    <td><%= payment.Payment_Method %></td>
+                    <td><%= payment.Amount %></td>
+                    <td><%= payment.Payment_Date %></td>
+                    <td><%= payment.Status %></td>
+                </tr>
+            <% }); %>
+        </table>
+    <% } else { %>
+        <p>No payments found.</p>
+    <% } %>
+</body>
+</html>

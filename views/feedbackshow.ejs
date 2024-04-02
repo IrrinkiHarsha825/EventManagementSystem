@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Information</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Feedback Information</h1>
+    <% if(k && k.length > 0) { %>
+        <table>
+            <tr>
+                <th>Feedback ID</th>
+                <th>Event ID</th>
+                <th>Participant ID</th>
+                <th>Rating</th>
+                <th>Comment</th>
+                <th>Submission Date</th>
+            </tr>
+            <% k.forEach(function(feedback) { %>
+                <tr>
+                    <td><%= feedback.Feedback_ID %></td>
+                    <td><%= feedback.Event_ID %></td>
+                    <td><%= feedback.Participant_ID %></td>
+                    <td><%= feedback.Rating %></td>
+                    <td><%= feedback.Comment %></td>
+                    <td><%= feedback.Submission_Date %></td>
+                </tr>
+            <% }); %>
+        </table>
+    <% } else { %>
+        <p>No feedback found.</p>
+    <% } %>
+</body>
+</html>

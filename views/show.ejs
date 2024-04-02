@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+  border:1px solid black;
+}
+table,h1{
+    text-align: center;
+}
+div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:100px;
+}
+    </style>
+</head>
+<body>
+    <h1>Organizers</h1>
+    <% if(locals.k) {%>
+<div>
+    <table>
+        <tr>
+            <th>Organizer_ID</th>
+            <th>Organizer_Name</th>
+            <th>Organizer_Contact_Info</th>
+        </tr>
+    <% for(i=0;i<k.length;i++) {%>
+            <tr>
+                <td><%=k[i].Organizer_ID%></td>
+                <td><%= k[i].Organizer_Name %></td>
+                <td><%= k[i].Organizer_Contact_Info %></td>
+            </tr>
+        <% } %>
+    <% } %>
+</table>
+</div>
+</body>
+</html>

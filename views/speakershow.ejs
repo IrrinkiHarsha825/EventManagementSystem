@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Speakers</h1>
+    <% if(locals.k){ %>
+        <table>
+            <tr>
+                <th>Speaker_ID</th>
+                <th>Speaker_Name</th>
+                <th>Speaker_Contact_Info</th>
+            </tr>
+        <% for(i=0;i<k.length;i++){ %>
+            <tr>
+                 <td><%= k[i].Speaker_ID %></td>
+               <td><%= k[i].Speaker_Name%></td>
+                <td><%= k[i].Speaker_Contact_Info %></td>
+            </tr>
+            <% } %>
+        </table>
+        <% } %>
+</body>
+</html>

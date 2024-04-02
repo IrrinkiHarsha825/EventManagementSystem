@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Information</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Booking Information</h1>
+    <% if(k && k.length > 0) { %>
+        <table>
+            <tr>
+                <th>Booking ID</th>
+                <th>Event ID</th>
+                <th>Participant ID</th>
+                <th>Ticket ID</th>
+                <th>Quantity</th>
+                <th>Total Amount</th>
+                <th>Booking Date</th>
+            </tr>
+            <% k.forEach(function(booking) { %>
+                <tr>
+                    <td><%= booking.Booking_ID %></td>
+                    <td><%= booking.Event_ID %></td>
+                    <td><%= booking.Participant_ID %></td>
+                    <td><%= booking.Ticket_ID %></td>
+                    <td><%= booking.Quantity %></td>
+                    <td><%= booking.Total_Amount %></td>
+                    <td><%= booking.Booking_Date %></td>
+                </tr>
+            <% }); %>
+        </table>
+    <% } else { %>
+        <p>No bookings found.</p>
+    <% } %>
+</body>
+</html>

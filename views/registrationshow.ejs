@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Registrations</h1>
+    <div>
+        <table>
+            <tr>
+                <th>Registration_ID</th>
+                <th>Event_ID</th>
+                <th>Participant_ID</th>
+                <th>Registration_Date</th>
+            </tr>
+            <% if(locals.k){ %>
+                <% for(i=0;i<k.length;i++) {%>
+                    <tr>
+                        <td><%=k[i].Registration_ID%></td>
+                        <td><a href="Registrations/Event/:<%= k[i].Event_ID %>"><%=k[i].Event_ID%></a></td>
+                        <td><a href=""><%=k[i].Participant_ID%></a></td>
+                        <td><%=k[i].Registration_Date.toDateString()%></td>
+                    </tr>
+                    <% } %>
+                <% } %>
+        </table>
+    </div>
+</body>
+</html>

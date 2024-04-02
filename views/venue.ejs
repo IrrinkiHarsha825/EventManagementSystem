@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Venues</h1>
+    <% if(locals.k){ %>
+        <table>
+            <tr>
+                <th>Venue_ID</th>
+                <th>Venue_Name</th>
+                <th>Venue_Location</th>
+                <th>Venue_Capacity</th>
+            </tr>
+        <% for(i=0;i<k.length;i++){ %>
+            <tr>
+               <%=  <td>k[i].Venue_ID</td> %>
+                <%= <td>k[i].Venue_Name</td> %>
+                <%= <td>k[i].Venue_Location</td> %>
+                <%= <td>k[i].Venue_Capacity</td> %>
+            </tr>
+            <% } %>
+        </table>
+        <% } %>
+</body>
+</html>

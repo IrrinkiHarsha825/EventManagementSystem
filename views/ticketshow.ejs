@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Details</title>
+    <style>
+        /* Add your CSS styles here */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ticket Details</h1>
+    <% if(k.length > 0){ %>
+        <table>
+            <tr>
+                <th>Ticket ID</th>
+                <th>Event ID</th>
+                <th>Ticket Name</th>
+                <th>Price</th>
+                <th>Available Quantity</th>
+            </tr>
+            <% k.forEach(ticket => { %>
+                <tr>
+                    <td><%= ticket.Ticket_ID %></td>
+                    <td><%= ticket.Event_ID %></td>
+                    <td><%= ticket.Ticket_Name %></td>
+                    <td><%= ticket.Price %></td>
+                    <td><%= ticket.Available_Quantity %></td>
+                </tr>
+            <% }); %>
+        </table>
+    <% } else { %>
+        <p>No tickets available.</p>
+    <% } %>
+</body>
+</html>

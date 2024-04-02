@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+  border:1px solid black;
+  border-collapse: collapse;
+}
+table,h1{
+    text-align: center;
+}
+div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:100px;
+}
+    </style>
+</head>
+<body>
+    <h1>Events</h1>
+<div>
+    <table>
+        <tr>
+            <th>Event_ID</th>
+            <th>Event_Name</th>
+            <th>Event_Description</th>
+            <th>Event_Date</th>
+            <th>Event_Location</th>
+            <th>Organizer_ID</th>
+        </tr>
+        <% if(locals.k){ %>
+            <% for(i=0;i<k.length;i++) {%>
+                <tr>
+                    <td><%= k[i].Event_ID %></td>
+                    <td><%= k[i].Event_Name %></td>
+                    <td><%= k[i].Event_Description %></td>
+                    <td><%= k[i].Event_Date.toDateString()%></td>
+                    <td><%= k[i].Event_Location %></td>
+                    <td><a href="/Event/:<%= k[i].Organizer_ID %>"><%= k[i].Organizer_ID %></a></td>
+                </tr>
+                <% } %>
+            <% } %>
+    </table>
+</div>
+</body>
+</html>
